@@ -16,6 +16,7 @@
         android:rowCount="4">
 
 
+        <!--Player names-->
         <TableRow>
 
             <TextView
@@ -74,9 +75,8 @@
 
         </TableRow>
 
-        <!--Row 2-->
 
-        <!--Row 3-->
+        <!--Row 2-->
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -113,6 +113,8 @@
 
         </TableRow>
 
+
+        <!--Row 3-->
         <TableRow>
 
             <Button
@@ -149,6 +151,8 @@
 
     </TableLayout>
 
+
+    <!--Reset button-->
     <Button
         android:id="@+id/resetButton"
         android:layout_width="wrap_content"
@@ -165,6 +169,7 @@
         android:textColor="#FFFFFF"
         android:textSize="18sp" />
 
+    <!--Information text-->
     <TextView
         android:id="@+id/WinnerText"
         android:layout_width="wrap_content"

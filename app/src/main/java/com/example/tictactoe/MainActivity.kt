@@ -35,8 +35,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         resetButton.setOnClickListener(this)
     }
 
-    @SuppressLint("SetTextI18n")
     override fun onClick(view: View) {
+        //Set click listeners for every button
 
         when (view!!.id) {
 
@@ -98,15 +98,17 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                             Button31.text as String, Button32.text as String,
                             Button33.text as String)
 
-        val winner = win(list)
+        val winner = win(list)        // Checks if player has three on row and if so, then return true
 
         val winnerText: TextView = findViewById(R.id.WinnerText)
 
         if (turn > 0){
+            // When first turn is passed, then erases winnerText
             winnerText.text = ""
         }
 
         if (winner){
+            //If player has three in row then print who won and disables every button
 
             if(!player1) {
                 winnerText.text = "Player 1 won"
@@ -134,6 +136,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
 
     private fun checkPlayer(Button: Button){
+        //Check who's turn and change button text according that
 
         var colorRed  = Color.RED
         var colorBlue = Color.BLUE
@@ -162,6 +165,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun restartGame() {
+        //Erases every button text, makes them clickable and prints who starts
 
         val winnerText: TextView = findViewById(R.id.WinnerText)
 
