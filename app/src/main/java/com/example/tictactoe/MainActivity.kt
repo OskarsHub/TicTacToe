@@ -13,8 +13,13 @@ import com.example.tictactoe.CheckWin.win
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
+
+    // If player1 == true, it's player1 turn and if false then player2 turn
     private var player1 = true
     private var turn = 0
+
+   // If gameMod == ture, then game is on normalMode and if false then game is on infiniteMode
+    private var gameMode = true
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -106,7 +111,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             // When first turn is passed, then erases winnerText
             winnerText.text = ""
         }
-
+        
         if (winner){
             //If player has three in row then print who won and disables every button
 

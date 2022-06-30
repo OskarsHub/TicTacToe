@@ -169,6 +169,7 @@
         android:textColor="#FFFFFF"
         android:textSize="18sp" />
 
+
     <!--Information text-->
     <TextView
         android:id="@+id/WinnerText"
